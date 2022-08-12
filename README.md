@@ -28,13 +28,13 @@ To use the `tweepy.asynchronous` subpackage, be sure to install with the
 You can also use Git to clone the repository from GitHub to install the latest
 development version:
 
-    git clone https://github.com/tweepy/tweepy.git
+    git clone https://github.com/vistahw/tweepy.git
     cd tweepy
     pip install .
 
 Alternatively, install directly from the GitHub repository:
 
-    pip install git+https://github.com/tweepy/tweepy.git
+    pip install git+https://github.com/vistahw/tweepy.git
 
 Python 3.7 - 3.10 are supported.
 
