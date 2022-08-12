@@ -3684,7 +3684,7 @@ class API:
 
         return media
 
-    def chunked_upload_append(self, media_id, media, segment_index, **kwargs):
+    def chunked_upload_append(self, media_id, media_data, segment_index, **kwargs):
         """chunked_upload_append(media_id, media, segment_index)
 
         Use this endpoint to upload a chunk (consecutive byte range) of the
@@ -3710,7 +3710,7 @@ class API:
             'media_id': media_id,
             'segment_index': segment_index
         }
-        files = {'media': media}
+        files = {'media_data': media_data}
         return self.request(
             'POST', 'media/upload', post_data=post_data, files=files,
             upload_api=True, **kwargs
@@ -3782,6 +3782,7 @@ class API:
             'command': 'INIT',
             'total_bytes': total_bytes,
             'media_type': media_type,
+            'shared':True
         }
         if media_category is not None:
             post_data['media_category'] = media_category
